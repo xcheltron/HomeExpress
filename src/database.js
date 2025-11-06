@@ -14,4 +14,4 @@ connection.connect((err) =>{
     } console.log('✅ Conexion realizada con exito')
 })
 
-module.exports = connection
+export default connection
