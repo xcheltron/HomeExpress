@@ -1,10 +1,16 @@
 import mysql2 from 'mysql2'
+import { configuraciones } from './Configurations.js'
+
+const {HOST} = configuraciones();
+const {USER} = configuraciones();
+const {DATA} = configuraciones();
+const {PASS} = configuraciones();
 
 const connection = mysql2.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "1234",
-    database: "homeStore"
+    host:HOST,
+    user:USER,
+    password:PASS,
+    database:DATA
 })
 
 connection.connect((err) =>{
