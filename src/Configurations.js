@@ -7,5 +7,6 @@ export function configuraciones (){
     const PASS = process.env.DB_PASS
     const USER = process.env.DB_USER
     const DATA = process.env.DB_DATA
-    return {PORT, HOST, PASS, USER, DATA}
+    const SALT_ROUNDS = Number(process.env.SALT_ROUNDS)
+    return {PORT, HOST, PASS, USER, DATA, SALT_ROUNDS}
 }
